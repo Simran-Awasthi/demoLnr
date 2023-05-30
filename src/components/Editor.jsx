@@ -6,7 +6,6 @@ import "./Editor.css";
 
 import Editor from "react-medium-editor";
 import { useStore } from "../store";
-import { v4 } from "uuid";
 
 const EditorPage = () => {
   //   const editor = new MediumEditor(".editable", {

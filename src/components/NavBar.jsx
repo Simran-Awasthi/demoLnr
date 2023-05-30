@@ -15,7 +15,7 @@ const links = [
 
 function NavBar() {
   return (
-    <nav className="flex flex-row  w-full items-center  h-20 p-2 gap-8 ">
+    <nav className="flex flex-row  w-full items-center  h-20 p-2 gap-8 border-b-2 border-gray-100 ">
       <FaBars className=" w-8 h-8 pl-1 m-2 ml-6 " />
       <div className="w-full flex flex-row items-center gap-2  ">
         <FaSearch className=" w-4 h-4  text-gray-300" />
@@ -26,10 +26,14 @@ function NavBar() {
         <p className=" text-gray-400">INVITE TEAM MEMBER</p>
 
         <BsBell className="w-5 h-5 text-gray-400 ml-8" />
-        <div className="m-2 p-2">
-          <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="h-10 w-10 flex justify-center items-center bg-[#a75992] rounded-full shadow-md">
+        <div className="m-2 p-2 relative">
+          <Menu as="div" className=" inline-block text-left">
+            <Menu.Button className="h-10 w-10 flex justify-center items-center bg-[#a75992] rounded-full  shadow-md">
               <p className="text-center text-white font-semibold ">FL</p>
+              <p className=" bg-red-600 text-white flex justify-center items-center w-10 h-4 rounded-full px-2 text-xs absolute top-0 left-8 uppercase font-bold border-white border-2">
+                NEW
+              </p>
+              <div className="w-2 h-2 rounded-full bg-green-600 border-2 border-white absolute bottom-2 left-10"></div>
             </Menu.Button>
             {/* <div className="pl-3 rounded-full w-10 h-10   text-center flex">
               
@@ -44,13 +48,13 @@ function NavBar() {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none flex flex-col">
+              <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y p-2 divide-gray-100 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none flex flex-col">
                 {links.map((link) => (
                   <Menu.Item
                     as="a"
                     key={link.href}
                     href={link.href}
-                    className="ui-active:bg-gray-100 ui-active:bg-opacity-60   ui-not-active:text-black w-full p-2 first:rounded-t-md last:rounded-b-md no-underline"
+                    className="ui-active:bg-gray-100 ui-active:bg-opacity-60 ui-not-active:text-black w-full p-2 first:rounded-t-md last:rounded-b-md no-underline"
                   >
                     {link.label}
                   </Menu.Item>
