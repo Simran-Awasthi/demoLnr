@@ -124,6 +124,7 @@ const CollectionTile = ({ data, p = 2 }) => {
                 <button
                   onClick={() => {
                     removeFolder(data);
+                    close();
                   }}
                   className="flex gap-2 justify-center items-center text-red-600 hover:text-white hover:bg-red-600 px-2 py-1"
                 >
